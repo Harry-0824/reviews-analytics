@@ -21,5 +21,18 @@ for d in data:
 	if len(d) <100:
 		new.append(d)
 print('一共有',len(new),'筆資料小於100')
-print(new[0])
-print(new[15])
+#print(new[0])
+#print(new[15])
+
+# good = []
+# for d in data:
+# 	if 'good' in d:
+# 		good.append(d)
+# print('一共有',len(good),'筆資料有good')
+# print(good[0])
+
+good = [d for d in data if 'good' in d]
+print('一共有',len(good),'筆資料有good')
+
+bad = ['bad' in d for d in data]
+print(bad)
